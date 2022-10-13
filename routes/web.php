@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\AboutController;
+use App\Http\Controllers\ContactController;
+use App\Http\Controllers\CredentialController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LogoController;
 use App\Http\Controllers\SliderController;
@@ -10,6 +13,9 @@ use App\Http\Controllers\FrontendController;
 use App\Http\Controllers\GalcatController;
 use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\NewsController;
+use App\Http\Controllers\TestimonialController;
+
+use App\Models\Credential;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,7 +33,15 @@ use App\Http\Controllers\NewsController;
 }); */
 
 Route::get('/', [FrontendController::class,'index'])->name('index'); 
-
+Route::get('/about-us', [FrontendController::class,'about'])->name('about.us'); 
+Route::get('/event-all', [FrontendController::class,'event'])->name('event.all'); 
+Route::get('/news-all', [FrontendController::class,'news'])->name('news.all'); 
+Route::get('/gallery-cat', [FrontendController::class,'galleryCat'])->name('gallery.cat'); 
+Route::get('/gallery-all/{id}', [FrontendController::class,'gallery'])->name('gallery.all'); 
+Route::get('/event-single/{id}', [FrontendController::class,'event_single'])->name('event.single'); 
+Route::get('/news-single/{id}', [FrontendController::class,'news_single'])->name('news.single'); 
+Route::get('/event-by-tag/{id}', [FrontendController::class,'eventByTag'])->name('event.tag'); 
+Route::get('/news-by-tag/{id}', [FrontendController::class,'newsByTag'])->name('news.tag'); 
 Auth::routes();
 
 Route::group(['middleware' => 'auth'], function () {
@@ -42,5 +56,9 @@ Route::resources([
   'news'=> NewsController::class,
   'galcat' => GalcatController::class,
   'gallery' => GalleryController::class,
+  'testimonial' => TestimonialController::class,
+  'contact' => ContactController::class,
+  'credential' => CredentialController::class,
+  'about' => AboutController::class
 ]);
 });

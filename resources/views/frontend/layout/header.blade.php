@@ -1,8 +1,8 @@
-<nav id="main-navbar">
+<nav id="main-navbar" style="background: #f9eef8">
     <div class="container">
       <div class="navbar-header">
         <div class="navbar-brand">
-          <a class="logo" href="index.html">
+          <a class="logo" href="{{route('index')}}">
             <img src="{{(!empty($logo->logo))?URL::to('storage/'.$logo->logo):URL::to('image/no_image.png')}}" alt="logo">
           </a>
         </div>
@@ -13,49 +13,23 @@
           <i class="fa fa-search"></i>
         </button>
       </div>
-      <div class="navbar-search">
-        <button class="search-btn">
-          <i class="fa fa-search"></i>
-        </button>
-        <div class="search-form">
-          <form>
-            <input class="input" type="text" name="search" placeholder="Search">
-          </form>
-        </div>
-      </div>
+
       <ul class="navbar-menu nav navbar-nav navbar-right">
         <li>
-          <a href="index.html">Home</a>
+          <a href="{{route('index')}}">Home</a>
         </li>
         <li>
-          <a href="#">About</a>
+          <a href="{{route('about.us')}}">About</a>
         </li>
-        <li class="has-dropdown">
-          <a href="#">Causes</a>
-          <ul class="dropdown">
-            <li>
-              <a href="theme/charity2/single-cause.html">Single Cause</a>
-            </li>
-          </ul>
+        <li >
+          <a href="{{route('event.all')}}">Events</a>
+
         </li>
-        <li class="has-dropdown">
-          <a href="#">Events</a>
-          <ul class="dropdown">
-            <li>
-              <a href="theme/charity2/single-event.html">Single event</a>
-            </li>
-          </ul>
+        <li class="">
+          <a href="{{route('news.all')}}">News</a>
         </li>
-        <li class="has-dropdown">
-          <a href="#">Blog</a>
-          <ul class="dropdown">
-            <li>
-              <a href="theme/charity2/blog.html">Blog Page</a>
-            </li>
-            <li>
-              <a href="theme/charity2/single-blog.html">Single Blog</a>
-            </li>
-          </ul>
+        <li class="">
+          <a href="{{route('gallery.cat')}}">Gallery</a>
         </li>
         <li>
           <a href="#">Contact</a>

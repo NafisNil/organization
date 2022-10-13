@@ -5,30 +5,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>@yield('title')</title>
-    <link href="http://fonts.googleapis.com/css?family=Roboto:300,400%7CSource+Sans+Pro:700" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Roboto:300,400%7CSource+Sans+Pro:700" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
-    <link type="text/css" rel="stylesheet" href="{{asset('frontend')}}/css/style_one.css" />
+    <link type="text/css" rel="stylesheet" href="{{asset('frontend')}}/css/style_two.css" />
     <!--[if lt IE 9]>
 					<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 					<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 					<![endif]-->
   </head>
-  @php
-  $prefix = Request::route()->getPrefix();
-  $route = Request::route()->getName();
-  @endphp
   <body>
-    <header id="home">
-      @if ($route == 'index')
-        @include('frontend.layout.header')
-    
-            @include('frontend.layout.slider')
-            @else
-            @include('frontend.layout.single_header')
-        @endif
-      </header>
-      @yield('content')
-      @include('frontend.layout.footer')
+<!-- header -->
+
+@include('frontend.layout.single_header')
+<!-- header -->
+    <div class="section">
+      <div class="container">
+        @yield('content')
+      </div>
+    </div>
+<!-- footer -->
+@include('frontend.layout.single_footer')
+<!-- footer -->
     <script src="{{asset('frontend')}}/js/jquery.min.js"></script>
     <script src="{{asset('frontend')}}/js/bootstrap.min.js_owl.carousel.min.js.pagespeed.jc.6INv6TP5LI.js"></script>
     <script>
@@ -54,7 +51,6 @@
       gtag('js', new Date());
       gtag('config', 'UA-23581568-13');
     </script>
-    <script defer src="{{asset('frontend')}}/js/beacon.min.js" data-cf-beacon='{"rayId":"750aebecffe48c35","token":"cd0b4b3a733644fc843ef0b185f98241","version":"2022.8.1","si":100}'></script>
-
+    <script defer src="{{asset('frontend')}}/beacon.min.js" data-cf-beacon='{"rayId":"750aebf188028c1d","token":"cd0b4b3a733644fc843ef0b185f98241","version":"2022.8.1","si":100}'></script>
   </body>
 </html>

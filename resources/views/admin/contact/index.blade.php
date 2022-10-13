@@ -5,12 +5,12 @@
       <div class="container">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Data</h1>
+            <h1>Contact</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Data</li>
+              <li class="breadcrumb-item active">Contact</li>
             </ol>
           </div>
         </div>
@@ -24,12 +24,14 @@
           <!-- left column -->
              <div class="card">
               <div class="card-header">
-                <h3 class="card-title">Data</h3>
-                @if ($dataCount < 4)
-               
-                <a href="{{route('data.create')}}" class="float-right btn btn-outline-dark btn-sm mb-2"><i class="fas fa-plus-square"></i></a>
-                     
-                @endif
+                <h3 class="card-title">Contact</h3>
+              
+               @if ($contactCount < 1)
+             
+                <a href="{{route('contact.create')}}" class="float-right btn btn-outline-dark btn-sm mb-2"><i class="fas fa-plus-square"></i></a>
+                           
+               @endif
+              
               </div>
               <!-- /.card-header -->
               <div class="card-body">
@@ -39,8 +41,8 @@
                   <tr>
                     <th>#</th>
                     <th>Name</th>
-                    <th>Amount</th>
-
+                    <th>Designation</th>
+                    <th>Speech</th>
                     <th>Action</th>
                    
                   </tr>
@@ -48,43 +50,41 @@
                   <tbody>
                  
                   
-                    @foreach ($data as $key=>$item) 
+             
                             
                    
                    
                   <tr>
-                    <td>{{++$key}}</td>
-                   <td>{{$item->name}}</td>
-                   <td>{{$item->amount}}</td>
-                  
+                    <td>#1</td>
+                   <td>{{@$contact->email}}</td>
+                   <td>{{@$contact->mobile}}</td>
+                   <td>{!!@$contact->address!!}</td>
                  
                     <td>
-                      
-                      <a href="{{route('data.edit',[$item])}}"><button class="btn btn-outline-info btn-sm"><i class="fas fa-pen-square"></i></button></a>
+                      @if ($contactCount >0)
+                      <a href="{{route('contact.edit',[$contact])}}"><button class="btn btn-outline-info btn-sm"><i class="fas fa-pen-square"></i></button></a>
                     
+             
                           
-                    
-                     
-                      @if ($dataCount < 4)
-                      <form action="{{route('data.destroy',[$item])}}" method="POST">
+                      
+                      <form action="{{route('contact.destroy',[$contact])}}" method="POST">
                         @method('DELETE')
                         @csrf
                         <button class="btn btn-outline-danger btn-sm"><i class="fas fa-trash"></i></button>
                     </form>
                     @endif
-                 
                     </td>
                    
                   </tr>
                 
-    
-                  @endforeach
+
                   </tbody>
                   <tfoot>
                   <tr>
                     <th>#</th>
                     <th>Name</th>
-                    <th>Amount</th>
+                    <th>Designation</th>
+                    <th>Speech</th>
                     <th>Action</th>
                   
                   </tr>

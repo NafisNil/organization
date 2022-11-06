@@ -33,6 +33,9 @@
         <li class="">
           <a href="{{route('gallery.cat')}}">Gallery</a>
         </li>
+        <li class="">
+          <a href="{{route('contact.us')}}">Contact Us</a>
+        </li>
       </ul>
     </div>
   </nav>
@@ -56,6 +59,10 @@
     $title = "Events";
   }else if($route == 'news.single'){
     $title = "News Details";
+  }else if($route == 'application.create'){
+    $title = "Member Application";
+  }else if($route == "contact.us"){
+    $title = "Contact Us";
   }
   @endphp
   <div id="page-header">

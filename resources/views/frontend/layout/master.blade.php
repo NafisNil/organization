@@ -12,6 +12,26 @@
 					<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 					<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 					<![endif]-->
+        <style>
+            /* width */
+        ::-webkit-scrollbar {
+          width: 10px;
+        }
+        
+        /* Track */
+        ::-webkit-scrollbar-track {
+          background: #f0aff4;
+        }
+        
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+          background: linear-gradient(90deg, rgba(176,36,176,1) 0%, rgba(230,107,240,1) 35%, rgba(173,121,193,1) 100%);
+        }
+        
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+          background:linear-gradient(90deg, rgba(176,36,176,1) 0%, rgba(230,107,240,1) 35%, rgba(173,121,193,1) 100%);
+        </style>
   </head>
   @php
   $prefix = Request::route()->getPrefix();

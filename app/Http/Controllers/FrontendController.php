@@ -67,6 +67,28 @@ class FrontendController extends Controller
         return view('frontend.news',$data);
     }
 
+
+    public function contact()
+    {
+        # code...
+        $data['logo'] = Logo::first();
+        $data['credential'] = Credential::first();
+        $data['contact'] = Contact::first();
+        return view('frontend.contact',$data);
+    }
+
+
+    public function team()
+    {
+        # code...
+        $data['logo'] = Logo::first();
+        $data['credential'] = Credential::first();
+        $data['contact'] = Contact::first();
+        
+        return view('frontend.contact',$data);
+    }
+
+
     public function galleryCat()
     {
         # code...

@@ -118,7 +118,7 @@
           <div class="cta-content text-center">
             <h1>Become A Member</h1>
        
-            <a href="#" class="primary-button">Join Us Now!</a>
+            <a href="{{route('application.create')}}" class="primary-button">Join Us Now!</a>
           </div>
         </div>
       </div>

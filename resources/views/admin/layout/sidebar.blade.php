@@ -166,6 +166,15 @@
           </li>
 
           <li class="nav-item">
+            <a href="{{route('application.list')}}" class="nav-link {{$route == 'application.list'?'active':''}}">
+              <i class="nav-icon far fa-image"></i>
+              <p>
+                Application
+              </p>
+            </a>
+          </li>
+
+          <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="fas fa-circle nav-icon"></i>
               <p>Level 1</p>

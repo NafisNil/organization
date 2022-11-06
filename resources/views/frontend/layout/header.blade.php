@@ -31,8 +31,8 @@
         <li class="">
           <a href="{{route('gallery.cat')}}">Gallery</a>
         </li>
-        <li>
-          <a href="#">Contact</a>
+        <li class="">
+          <a href="{{route('contact.us')}}">Contact Us</a>
         </li>
       </ul>
     </div>

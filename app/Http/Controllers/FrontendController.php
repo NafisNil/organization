@@ -15,6 +15,7 @@ use App\Models\Credential;
 use App\Models\About;
 use App\Models\Galcat;
 use App\Models\Gallery;
+use App\Models\Team;
 
 class FrontendController extends Controller
 {
@@ -84,8 +85,8 @@ class FrontendController extends Controller
         $data['logo'] = Logo::first();
         $data['credential'] = Credential::first();
         $data['contact'] = Contact::first();
-        
-        return view('frontend.contact',$data);
+        $data['team'] = Team::all();
+        return view('frontend.team',$data);
     }
 
 

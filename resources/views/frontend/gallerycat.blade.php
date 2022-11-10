@@ -9,7 +9,7 @@
        <div class="row">
         @foreach ($gallerycat as $item)
     
-          <div class="col-md-6">
+          <div class="col-md-4">
              <div class="article">
                 <div class="article-img">
                    <a href="{{route('gallery.all',$item->id)}}">

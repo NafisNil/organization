@@ -28,6 +28,9 @@
 
         </li>
         <li class="">
+          <a href="{{route('team.all')}}">Team</a>
+        </li>
+        <li class="">
           <a href="{{route('news.all')}}">News</a>
         </li>
         <li class="">
@@ -36,6 +39,7 @@
         <li class="">
           <a href="{{route('contact.us')}}">Contact Us</a>
         </li>
+
       </ul>
     </div>
   </nav>
@@ -63,6 +67,8 @@
     $title = "Member Application";
   }else if($route == "contact.us"){
     $title = "Contact Us";
+  }else if($route == "team.all"){
+    $title = "Our Team";
   }
   @endphp
   <div id="page-header">

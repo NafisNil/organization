@@ -166,6 +166,15 @@
           </li>
 
           <li class="nav-item">
+            <a href="{{route('team.index')}}" class="nav-link {{$route == 'team.index'?'active':''}}">
+              <i class="nav-icon far fa-image"></i>
+              <p>
+                Team
+              </p>
+            </a>
+          </li>
+
+          <li class="nav-item">
             <a href="{{route('application.list')}}" class="nav-link {{$route == 'application.list'?'active':''}}">
               <i class="nav-icon far fa-image"></i>
               <p>

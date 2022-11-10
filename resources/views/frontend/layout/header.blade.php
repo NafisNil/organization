@@ -26,6 +26,9 @@
 
         </li>
         <li class="">
+          <a href="{{route('team.all')}}">Team</a>
+        </li>
+        <li class="">
           <a href="{{route('news.all')}}">News</a>
         </li>
         <li class="">
@@ -34,6 +37,7 @@
         <li class="">
           <a href="{{route('contact.us')}}">Contact Us</a>
         </li>
+       
       </ul>
     </div>
   </nav>

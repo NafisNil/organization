@@ -1,15 +1,15 @@
 @extends('frontend.layout.single_master')
 @section('title')
-    Web Foundation - Gallery
+    Web Foundation - Team Member
 @endsection
 
 @section('content')
 <div class="row">
     <main id="main" class="col-md-12">
        <div class="row">
-        @foreach ($galleryall as $item)
+        @foreach ($team as $item)
     
-          <div class="col-md-6">
+          <div class="col-md-4">
              <div class="article">
                 <div class="article-img">
                    <a href="{{(!empty($item->logo))?URL::to('storage/'.$item->logo):URL::to('image/no_image.png')}}">
@@ -18,13 +18,13 @@
                 </div>
                 <div class="article-content">
                    <h3 class="article-title">
-                      <a href="">{{$item->title}}</a>
+                      <a href="">{{$item->name}}</a>
                    </h3>
                    <ul class="article-meta">
-                      <li>{{$item->created_at->format('d M, Y')}}</li>
+                      <li>{!!$item->designation!!}</li>
                     
                    </ul>
-                   <p>{!!$item->Galcat->category!!}...</p>
+                
                 </div>
              </div>
           </div>

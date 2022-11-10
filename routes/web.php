@@ -14,6 +14,7 @@ use App\Http\Controllers\FrontendController;
 use App\Http\Controllers\GalcatController;
 use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\NewsController;
+use App\Http\Controllers\TeamController;
 use App\Http\Controllers\TestimonialController;
 
 use App\Models\Credential;
@@ -72,6 +73,7 @@ Route::resources([
   'testimonial' => TestimonialController::class,
   'contact' => ContactController::class,
   'credential' => CredentialController::class,
-  'about' => AboutController::class
+  'about' => AboutController::class,
+  'team' => TeamController::class
 ]);
 });
